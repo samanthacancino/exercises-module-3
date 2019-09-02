@@ -51,3 +51,20 @@ const frontEndLanguagesNames = languages.reduce((acc, language) => {
 }, []);
 
 console.log(frontEndLanguagesNames);
+
+//sort 
+
+const sortByName = (a, b) => {
+  if (a.name < b.name) {
+    return -1;
+  } else if (a.name > b.name){
+      return 1;
+    }
+    else {
+      return 0;
+    }
+};
+
+const sortedLanguages = languages.sort(sortByName);
+
+console.log(sortedLanguages);
